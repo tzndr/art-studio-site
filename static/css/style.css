@@ -1,0 +1,167 @@
+body,
+html  {
+  height: 100%;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.background-img {
+  background-image: url('../img/brick_background.jpg');
+  min-height: 100%;
+  min-width: 1024px;
+  width: 100%;
+  height: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.main-container {
+  display: flex;
+  min-height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-button-container {
+  width: 1200px;
+  height: 100%;
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  margin: 0 0 50px 0;
+}
+
+.signature-container {
+  display: block;
+  max-width: 27%;
+  height: 100%;
+  margin: 0 8px 50px 0;
+  float: left;
+}
+
+.nav-button {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  margin: 20px;
+  box-shadow: 0 13px 16px 0 rgba(0, 0, 0, 0.50),
+              0 15px 25px 0 rgba(0, 0, 0, 0.47);
+}
+
+.social-media-container {
+  text-align: center;
+}
+
+.social-container-main {
+  position: fixed;
+  right: 15px;
+  top: 25px;
+}
+
+.social-icon {
+  dispay: block;
+  height: 55px;
+  margin: 0 7px;
+}
+
+.header-container {
+  float: right;
+}
+
+.main-image-changer {
+  height: 750px;
+  width: 750px;
+  background-color: gray;
+  border-radius: 50%;
+  position: fixed;
+  left:0; right:0;
+  top:5%;
+  margin:auto;
+  max-width:100%;
+  max-height:100%;
+  overflow:auto;
+  display: relative;
+  z-index: -1;
+}
+
+.main-page-signature {
+  display: block;
+  width: 100%;
+  margin: auto;
+}
+
+.main-page-title {
+  display: block;
+  width: 100%;
+  margin: 10% 0 0 0;
+}
+
+.nav-bar {
+  margin: auto;
+  width: auto;
+}
+
+.logo {
+  width: 45px;
+  position: absolute;
+  top: 7px;
+  left: 7px;
+}
+
+.nav-link {
+  font: 16pt georia, arial;
+  margin: 0 10px;
+}
+
+.logo {
+  width: 45px;
+  position: absolute;
+  top: 7px;
+  left: 7px;
+}
+
+.main-container-main {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  margin: 0;
+}
+
+.name-container-main {
+  display: flex;
+  position: fixed;
+  top: 25px;
+  left: 25px;
+  align-items: center;
+  justify-content: center;
+}
+
+.name-main {
+  display: inline;
+  font: 35pt helvetica, arial;
+  margin: 0;
+}
+
+.studio-events-main {
+  display: inline;
+  font: 17pt helvetica, arial;
+  margin: 0 0 0 10px;
+  color: grey;
+
+}
+
+.enter-studio-main {
+  display: block;
+  position: absolute;
+  bottom: 5%;
+  width: 100%;
+  text-align: center;
+  font: 35pt helvetica, arial;
+}
