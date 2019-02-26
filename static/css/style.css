@@ -75,20 +75,49 @@ a {
   float: right;
 }
 
-.main-image-changer {
-  height: 750px;
-  width: 750px;
+.main-image-changer-1 {
+  height: 650px;
+  width: 650px;
   background-color: gray;
   border-radius: 50%;
   position: fixed;
   left:0; right:0;
-  top:5%;
-  margin:auto;
+  top:3%;
+  margin: auto;
   max-width:100%;
   max-height:100%;
   overflow:auto;
-  display: relative;
   z-index: -1;
+}
+
+.main-image-changer-2 {
+  height: 600px;
+  width: 600px;
+  background-color: gray;
+  border-radius: 50%;
+  position: fixed;
+  left:20px;
+  bottom:3%;
+  margin: auto;
+  max-width:100%;
+  max-height:100%;
+  overflow:auto;
+  z-index: -2;
+}
+
+.main-image-changer-3 {
+  height: 600px;
+  width: 600px;
+  background-color: gray;
+  border-radius: 50%;
+  position: fixed;
+  right:20px;
+  bottom: 3%;
+  margin: auto;
+  max-width:100%;
+  max-height:100%;
+  overflow:auto;
+  z-index: -2;
 }
 
 .main-page-signature {
@@ -160,8 +189,45 @@ a {
 .enter-studio-main {
   display: block;
   position: absolute;
-  bottom: 5%;
+  bottom: 10%;
   width: 100%;
   text-align: center;
   font: 35pt helvetica, arial;
+}
+
+@media screen and (max-width: 1000px) {
+  .main-image-changer-1 {
+    width: 400px;
+    height: 400px;
+    top: 15%;
+  }
+
+  .main-image-changer-2 {
+    width: 400px;
+    height: 400px;
+    top: 15%;
+  }
+
+  .main-image-changer-3 {
+    width: 400px;
+    height: 400px;
+    top: 15%;
+  }
+
+  .name-main {
+    font: 25pt helvetica, arial;
+  }
+
+  .studio-events-main {
+    font: 12pt helvetica, arial;
+  }
+
+  .enter-studio-main {
+    font: 25pt helvetica, arial;
+  }
+
+  .social-icon {
+    height: 35px;
+    margin: 0 4px;
+  }
 }

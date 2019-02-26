@@ -34,6 +34,10 @@ def showBlog():
 def showReachAmy():
     return render_template('reach_amy.html')
 
+@app.route('/login')
+def login():
+    return render_template('login.html')
+
 if __name__ == '__main__':
     app.secret_key = 'UdacityProject'
     app.debug = True
