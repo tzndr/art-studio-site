@@ -10,7 +10,7 @@ a {
 }
 
 .background-img {
-  background-image: url('../img/brick_background.jpg');
+  background-image: url('../img/studio/brick_background.jpg');
   min-height: 100%;
   min-width: 1024px;
   width: 100%;
@@ -29,8 +29,7 @@ a {
 }
 
 .nav-button-container {
-  width: 1200px;
-  height: 100%;
+  width: 65%;
   display: inline-flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -40,15 +39,15 @@ a {
 
 .signature-container {
   display: block;
-  max-width: 27%;
+  max-width: 30%;
   height: 100%;
   margin: 0 8px 50px 0;
   float: left;
 }
 
 .nav-button {
-  width: 300px;
-  height: 300px;
+  width: 25%;
+  height: 20%;
   border-radius: 50%;
   margin: 20px;
   box-shadow: 0 13px 16px 0 rgba(0, 0, 0, 0.50),
@@ -67,8 +66,8 @@ a {
 
 .social-icon {
   dispay: block;
-  height: 55px;
-  margin: 0 7px;
+  height: 100px;
+  margin: 20px 7px 0 7px;
 }
 
 .header-container {
@@ -186,6 +185,7 @@ a {
   display: block;
   width: 100%;
   margin: auto;
+  transform: rotate(-15deg);
 }
 
 .main-page-title {
@@ -249,24 +249,6 @@ a {
 }
 
 @media screen and (max-width: 1000px) {
-  .main-image-changer-1 {
-    width: 400px;
-    height: 400px;
-    top: 15%;
-  }
-
-  .main-image-changer-2 {
-    width: 400px;
-    height: 400px;
-    top: 15%;
-  }
-
-  .main-image-changer-3 {
-    width: 400px;
-    height: 400px;
-    top: 15%;
-  }
-
   .name-main {
     font: 25pt helvetica, arial;
   }
@@ -280,7 +262,7 @@ a {
   }
 
   .social-icon {
-    height: 35px;
-    margin: 0 4px;
+    height: 75px;
+    margin: 20px 4px;
   }
 }
