@@ -71,8 +71,8 @@ a {
 }
 
 .header-container {
-  float: right;
-  margin: 20px 20px 0 0;
+  text-align: center;
+  margin: 20px auto;
 }
 
 .home-circle-1 {
