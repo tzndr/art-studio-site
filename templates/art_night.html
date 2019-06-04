@@ -9,6 +9,39 @@
     {% block content %}
       {% include "header.html" %}
     {% endblock %}
+    <div class="art-night-main-container">
+      <div class="art-night-text-wrapper">
+        <p class="art-night-text" data-bind="text: artNightText"></p>
+      </div>
+      <div class="art-night-main-img-container">
+        <img class="art-night-main-img" src="../static/img/art_night/art_night_img.webp">
+      </div>
+    </div>
+    <div class="art-night-info-container">
+      <div class="art-night-info-wrapper">
+        <p class="art-night-info-header">Location</p>
+        <p class="art-night-info" data-bind="text: artNightLocation"></p>
+      </div>
+      <div class="art-night-info-wrapper">
+        <p class="art-night-info-header">Date & Time</p>
+        <p class="art-night-info" data-bind="text: artNightDate"></p>
+      </div>
+      <form class="reg-btn" action="https://checkout.payhub.com/transaction/cart" id="GuHkPm9iKtPkLlsFacARAq" method="post" target="_payhubcart">
+        <input type="hidden" name="mode" value="live" />
+        <input type="hidden" name="orgid" value="16217" />
+        <input type="hidden" name="apitoken" value="c6b32a62-00cc-4ed8-a178-96313e4c67e7" />
+        <input type="hidden" name="line_item[]" value="Registration" />
+        <input type="hidden" name="amount[]" value="35.00" />
+        <input type="hidden" name="note[]" value="" />
+        <input type="hidden" name="shipping_fee[]" value="" /><br />
+        <input type="text" name="qty[]" value="1" class="qty-box" placeholder="Qty" required="true" pattern="^[0-9]{1,6}$" />
+        <a href="#" onClick="document.getElementById('GuHkPm9iKtPkLlsFacARAq').submit();return false;"
+        class="art-night-register-btn">Register!</a>
+        <input type="hidden" name="custom_email_message" value="Thank you for registering for our next Art Night. See you there!" />
+      </form>
+    </div>
+    <div class="art-night-dates"></div>
+    <div class="art-night-testimonials"></div>
     <script src="../static/js/libs/knockout-3.2.0.js"></script>
     <script src="../static/js/model.js"></script>
     <script src="../static/js/app.js"></script>

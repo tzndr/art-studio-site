@@ -15,27 +15,36 @@
         </a>
         <img class="main-page-title" src="../static/img/studio/art_studio_and_events.png">
         <div class="social-media-container">
-          <a href="">
-          <img class="social-icon" src="../static/img/studio/ig_spray_icon.png">
+          <a href="https://www.instagram.com/amyzanderstudio/">
+            <img class="social-icon" src="../static/img/studio/ig_spray_icon.png">
           </a>
-          <a href="">
+          <a href="https://www.facebook.com/Art-Night-1596988327179714/">
             <img class="social-icon" src="../static/img/studio/fb_spray_icon.png">
           </a>
         </div>
       </div>
       <span class="nav-button-container">
-        <img class="nav-button"
-             data-bind="click: showAboutAmy"
-             src="../static/img/studio/about_me_thumbnail.png">
-        <img class="nav-button" src="../static/img/studio/art_night_thumbnail.png">
-        <img class="nav-button" src="../static/img/studio/shop_thumbnail.png">
-        <img class="nav-button" src="../static/img/studio/private_event_thumbnail.png">
-        <img class="nav-button" src="../static/img/studio/blog_thumbnail.png">
-        <img class="nav-button" src="../static/img/studio/contact_thumbnail.png">
+        <a class="nav-button-wrapper" href="{{url_for('showAboutAmy')}}">
+          <img class="nav-button-child" src="../static/img/studio/about_me_thumbnail.png">
+        </a>
+        <a class="nav-button-wrapper" href="{{url_for('showArtNight')}}">
+          <img class="nav-button-child" src="../static/img/studio/art_night_thumbnail.png">
+        </a>
+        <a class="nav-button-wrapper" href="{{url_for('showCatalog')}}">
+          <img class="nav-button-child" src="../static/img/studio/shop_thumbnail.png">
+        </a>
+        <a class="nav-button-wrapper" href="{{url_for('showPrivateEvents')}}">
+          <img class="nav-button-child" src="../static/img/studio/private_event_thumbnail.png">
+        </a>
+        <a class="nav-button-wrapper" href="{{url_for('showBlog')}}">
+          <img class="nav-button-child" src="../static/img/studio/blog_thumbnail.png">
+        </a>
+        <a class="nav-button-wrapper" href="{{url_for('showReachAmy')}}">
+          <img class="nav-button-child" src="../static/img/studio/contact_thumbnail.png">
+        </a>
       </span>
     </div>
     <script src="../static/js/libs/knockout-3.2.0.js"></script>
-    <script src="../static/js/app.js"></script>
     <script src="../static/js/app.js"></script>
   </body>
 </html>

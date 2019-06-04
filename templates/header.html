@@ -6,39 +6,50 @@
     <link rel="stylesheet" type="text/css" href="../static/css/style.css">
   </head>
   <body>
+    <a href="{{url_for('showStudio')}}">
+      <img class="header-logo" src="../static/img/signature_black.png">
+    </a>
     <div class="header-container">
       <div class='nav-bar'>
         <span>
           <a href="{{url_for('showAboutAmy')}}">
-            <img class="nav-link" src="../static/img/studio/about_me_thumbnail.png">
+            <img class="nav-link" data-bind="click: changeSrcAttrAboutAmy, attr: {src: aboutAmyNavImg}">
           </a>
         </span>
         <span>
           <a href="{{url_for('showArtNight')}}">
-            <img class="nav-link" src="../static/img/studio/art_night_thumbnail.png">
+            <img class="nav-link" data-bind="click: changeSrcAttrArtNight, attr: {src: artNightNavImg}">
           </a>
         </span>
         <span>
           <a href="{{url_for('showCatalog')}}">
-            <img class="nav-link" src="../static/img/studio/shop_thumbnail.png">
+            <img class="nav-link" data-bind="click: changeSrcAttrShop, attr: {src: shopNavImg}">
           </a>
         </span>
         <span>
           <a href="{{url_for('showPrivateEvents')}}">
-            <img class="nav-link" src="../static/img/studio/private_event_thumbnail.png">
+            <img class="nav-link" data-bind="click: changeSrcAttrPrivateEvent, attr: {src: privateEventNavImg}">
           </a>
         </span>
         <span>
           <a href="{{url_for('showBlog')}}">
-            <img class="nav-link" src="../static/img/studio/blog_thumbnail.png">
+            <img class="nav-link" data-bind="click: changeSrcAttrBlog, attr: {src: blogNavImg}">
           </a>
         </span>
         <span>
           <a href="{{url_for('showReachAmy')}}">
-            <img class="nav-link" src="../static/img/studio/contact_thumbnail.png">
+            <img class="nav-link" data-bind="click: changeSrcAttrContact, attr: {src: contactNavImg}">
           </a>
         </span>
       </div>
+    </div>
+    <div class="social-btn-wrapper">
+      <span><a href ="https://www.facebook.com/Art-Night-1596988327179714/">
+        <img class="social-btn-header" src="../static/img/fb_header.png">
+      </a></span>
+      <span><a href="https://www.instagram.com/amyzanderstudio/">
+        <img class="social-btn-header" src="../static/img/ig_header.png">
+      </a></span>
     </div>
     <script src="../static/js/libs/knockout-3.2.0.js"></script>
     <script src="../static/js/model.js"></script>
