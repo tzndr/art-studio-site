@@ -37,7 +37,7 @@ var ViewModel = function() {
       self.blogNavImg("../static/img/studio/blog_thumbnail.png");
     }
     else if (self.contactNavImg() != "../static/img/studio/contact_thumbnail.png") {
-      slef.contactNavImg("../static/img/studio/contact_thumbnail.png");
+      self.contactNavImg("../static/img/studio/contact_thumbnail.png");
     }
   }
 
