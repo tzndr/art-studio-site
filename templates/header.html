@@ -11,11 +11,11 @@
     </a>
     <div class="header-container">
       <div class='nav-bar'>
-        <span>
-          <a href="{{url_for('showAboutAmy')}}">
-            <img class="nav-link" data-bind="click: changeSrcAttrAboutAmy, attr: {src: aboutAmyNavImg}">
-          </a>
-        </span>
+        <a data-bind="click: changeSrcAttrAboutAmy" href="{{url_for('showAboutAmy')}}">
+          <span>
+            <img class="nav-link" data-bind="attr: {src: aboutAmyNavImg}">
+          </span>
+        </a>
         <span>
           <a href="{{url_for('showArtNight')}}">
             <img class="nav-link" data-bind="click: changeSrcAttrArtNight, attr: {src: artNightNavImg}">

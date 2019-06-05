@@ -40,7 +40,12 @@
         <input type="hidden" name="custom_email_message" value="Thank you for registering for our next Art Night. See you there!" />
       </form>
     </div>
-    <div class="art-night-dates"></div>
+    <div class="art-night-dates">
+      <h1 class="art-night-dates-header">Upcoming Art Night Dates</h1>
+      <p class="art-night-dates-text" data-bind="text: artNightDateText1"></p>
+      <p class="art-night-dates-text" data-bind="text: artNightDateText2"></p>
+      <p class="art-night-dates-text" data-bind="text: artNightDateText3"></p>
+    </div>
     <div class="art-night-testimonials"></div>
     <script src="../static/js/libs/knockout-3.2.0.js"></script>
     <script src="../static/js/model.js"></script>

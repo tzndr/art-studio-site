@@ -1,3 +1,5 @@
+var aboutAmyQuote = "\"Creativity is the way we share our souls the world.\"";
+
 var aboutAmyText = "I'm a passionate artist with creativity that " +
 "needs to come out and be expressed daily.  My main focuses are working with clay, " +
 "fused glass, and painting, but love to dabble in new and creative methods " +

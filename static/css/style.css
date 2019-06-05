@@ -296,6 +296,13 @@ a {
   text-align: justify;
 }
 
+.about-main-quote {
+  margin: auto auto 20px auto;
+  text-align: center;
+  font: bold 28pt georgia, arial;
+  font-style: italic;
+}
+
 .about-main-text {
   font: 16pt helvetica, arial;
   margin: auto auto 20px auto;
@@ -349,7 +356,7 @@ a {
 .art-night-info-container {
   display: flex;
   width: 90%;
-  margin: auto auto 75px auto;
+  margin: auto auto 95px auto;
   text-align: center;
 }
 
@@ -411,9 +418,24 @@ background-color: #9932CC;
 .art-night-dates,
 .art-night-testimonials {
   width: 100%;
-  height: 30%;
+  height: auto;
+  padding: 10px;
   background-color: orange;
   margin: auto auto 50px auto;
+  background-color: #9932CC;
+}
+
+.art-night-dates-header {
+  text-align: center;
+  font: bold 35pt helvetica, arial;
+  margin: auto;
+  color: white;
+}
+
+.art-night-dates-text {
+  text-align: center;
+  font: 20pt georgia, arial;
+  color: white;
 }
 
 
@@ -459,4 +481,3 @@ background-color: #9932CC;
   .art-night-text {
     font-size: 12pt;
   }
-}

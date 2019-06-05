@@ -20,6 +20,12 @@ var ViewModel = function() {
 
   this.contactNavImg = ko.observable("../static/img/studio/contact_thumbnail.png");
 
+  this.artNightDateText1 = ko.observable("Wednesday, July 24th 2019");
+
+  this.artNightDateText2 = ko.observable("Wednesday, August 21st 2019");
+
+  this.artNightDateText3 = ko.observable("Wednesday, August 25th 2019");
+
   this.resetNavImgs = function() {
     if (self.aboutAmyNavImg() != "../static/img/studio/about_me_thumbnail.png") {
       self.aboutAmyNavImg("../static/img/studio/about_me_thumbnail.png");
@@ -44,31 +50,37 @@ var ViewModel = function() {
   this.changeSrcAttrAboutAmy = function() {
     self.resetNavImgs();
     self.aboutAmyNavImg("../static/img/studio/about_me_thumbnail_selected.png");
+    return true;
   }
 
   this.changeSrcAttrArtNight = function() {
     self.resetNavImgs();
     self.artNightNavImg("../static/img/studio/art_night_thumbnail_selected.png");
+    return true;
   }
 
   this.changeSrcAttrShop = function() {
     self.resetNavImgs();
     self.shopNavImg("../static/img/studio/shop_thumbnail_selected.png");
+    return true;
   }
 
   this.changeSrcAttrPrivateEvent = function() {
     self.resetNavImgs();
     self.privateEventNavImg("../static/img/studio/private_event_thumbnail_selected.png");
+    return true;
   }
 
   this.changeSrcAttrBlog = function() {
     self.resetNavImgs();
     self.blogNavImg("../static/img/studio/blog_thumbnail_selected.png");
+    return true;
   }
 
   this.changeSrcAttrContact = function() {
     self.resetNavImgs();
     self.contactNavImg("../static/img/studio/contact_thumbnail_selected.png");
+    return true;
   }
 }
 
