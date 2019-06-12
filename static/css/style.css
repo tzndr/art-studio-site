@@ -62,7 +62,7 @@ a {
 .header-logo {
   position: absolute;
   left: 5px; top: 5px;
-  height: 200px;
+  height: 150px;
 }
 
 .social-media-container {
@@ -235,11 +235,11 @@ a {
 
 .social-btn-wrapper {
   position: absolute;
-  right: 0; top: 40px;
+  right: 0; top: 25px;
 }
 
 .social-btn-header {
-  height: 50px;
+  height: 75px;
   float: right;
   margin: auto 10px 10px auto;
 }
@@ -313,22 +313,31 @@ a {
   margin: auto;
 }
 
+.about-main-text-3 {
+  font: 16pt helvetica, arial;
+  margin: 20px auto auto auto;
+}
+
 .art-night-main-container {
   display: flex;
   width: 90%;
   height: 50%;
   justify-content: space-around;
-  margin: 150px auto 75px auto;
+  margin: 75px auto 75px auto;
   text-align: center;
 }
 
 .art-night-text-wrapper {
   display: flex;
+  flex-direction: column;
   justify-content: space-around;
   width: 50%;
   height: 100%;
   margin: 0;
-  overflow-y: auto;
+}
+
+.art-night-title {
+  font: bold 30pt helvetica, arial;
 }
 
 .art-night-text {
@@ -338,6 +347,7 @@ a {
   text-align: justify;
   height: auto;
   margin: auto;
+  overflow-y: auto;
 }
 
 .art-night-main-img-container {
@@ -383,16 +393,16 @@ display: inline-flex;
 font-family: helvetica, arial;
 font-size: 48px;
 font-weight: bold;
-border-style: solid;
 padding: 5px 20px;
 -webkit-border-radius: 5px;
 -moz-border-radius: 5px;
 border-radius: 5px;
 text-decoration: none;
 margin: auto;
-color: #ffffff;
-border-color: #ffffff;
+color: white;
 background-color: #9932CC;
+box-shadow: 0 13px 16px 0 rgba(0, 0, 0, 0.50),
+            0 15px 25px 0 rgba(0, 0, 0, 0.47);
 }
 
 .reg-btn {
@@ -415,29 +425,216 @@ background-color: #9932CC;
   margin: auto;
 }
 
-.art-night-dates,
-.art-night-testimonials {
+.art-night-dates {
   width: 100%;
   height: auto;
-  padding: 10px;
-  background-color: orange;
-  margin: auto auto 50px auto;
-  background-color: #9932CC;
+  padding: 70px 0 70px 0;
+  margin: auto auto 75px auto;
+  background-image: url("../img/art_night/scribble_circle_background_dates.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
 }
 
 .art-night-dates-header {
   text-align: center;
   font: bold 35pt helvetica, arial;
   margin: auto;
-  color: white;
 }
 
 .art-night-dates-text {
   text-align: center;
   font: 20pt georgia, arial;
-  color: white;
+  color: #9932CC;
 }
 
+.art-night-img-wrapper {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 75px;
+}
+
+.art-night-img {
+  height: 400px;
+}
+
+.art-night-testimonials {
+  width: 100%;
+  height: auto;
+  padding: 10px;
+  margin: auto auto 50px auto;
+}
+
+.art-night-test-header {
+  text-align: center;
+  font: bold 35pt helvetica, arial;
+  margin: auto;
+}
+
+.art-night-test-wrapper {
+  display: flex;
+  text-align: center;
+  margin: 25px auto;
+}
+
+.art-night-test-text {
+  text-align: center;
+  font: 20pt georgia, arial;
+  color: white;
+  width: 30%;
+  margin: auto;
+  color: #9932CC;
+}
+
+.private-event-container {
+  margin: 100px auto auto auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.private-event-img-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  width: 40%;
+}
+
+.private-event-img-wrapper-2 {
+  display: flex;
+  width: 100%;
+  margin: auto;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.private-event-text-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 40%;
+  margin: auto;
+}
+
+.private-event-text {
+  font: 18pt helvetica, arial;
+  text-align: justify;
+  margin: 10px auto;;
+}
+
+.private-event-img {
+  margin-bottom: 20px;
+}
+
+.private-event-img-2 {
+  width: 40%;
+  align-self: flex-start;}
+
+.private-event-img-3 {
+  width: 55%
+}
+
+.private-event-form-header {
+  font: bold 24pt helvetica, arial;
+}
+
+.private-event-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 60%;
+}
+
+.private-event-input {
+  margin: 10px auto;
+  width: 100%;
+  font: 16pt helvetica, arial;
+}
+
+.private-event-form-btn {
+  width: auto;
+  font: bold 24pt helvetica, arial;
+  color: white;
+  background-color: #9932CC;
+  border-radius: 5px;
+  padding: 5px 10px;
+  margin-top: 10px;
+}
+
+.contact-container {
+  width: 90%;
+  margin: 100px auto auto auto;
+  display: flex;
+  justify-content: space-around;
+}
+
+.contact-info-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-info-header {
+  font: bold 24pt helvetica, arial;
+  margin: 70px 0 0 0;
+}
+
+.contact-phone-btn,
+.contact-email-btn {
+  text-align: center;
+  width: 160px;
+  font: bold 24pt helvetica, arial;
+  padding: 5px 10px;
+  background-color: #9932CC;
+  color: white;
+  margin: 5px auto;
+  border-radius: 5px;
+  box-shadow: 0 13px 16px 0 rgba(0, 0, 0, 0.50),
+              0 15px 25px 0 rgba(0, 0, 0, 0.47);
+}
+
+.contact-social-btn {
+  width: 180px;
+  height: 50px;
+  font: bold 24pt helvetica, arial;
+  margin: 5px auto;
+  border-radius: 5px;
+  box-shadow: 0 13px 16px 0 rgba(0, 0, 0, 0.50),
+              0 15px 25px 0 rgba(0, 0, 0, 0.47);
+}
+
+.contact-info-form {
+  margin: 10px auto auto auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-form-input {
+  font: 18pt helvetica, arial;
+  color: purple;
+  margin-top: 10px;
+  width: 350px;
+}
+
+.contact-form-submit-btn {
+  width: 150px;
+  padding: 5px 10px;
+  background-color: #9932CC;
+  color: white;
+  font: bold 12pt helvetica, arial;
+  border: 0;
+  border-radius: 5px;
+  margin-top: 5px;
+  box-shadow: 0 13px 16px 0 rgba(0, 0, 0, 0.50),
+              0 15px 25px 0 rgba(0, 0, 0, 0.47);
+}
+
+.contact-main-img {
+  width: 600px;
+  align-self: flex-start;
+}
 
 @media screen and (max-width: 1000px) {
   .name-main {
@@ -454,8 +651,8 @@ background-color: #9932CC;
 
   .header-logo {
     position: absolute;
-    left: 5px; top: 30px;
-    height: 100px;
+    left: 5px; top: 25px;
+    height: 85px;
   }
 
   .social-icon {

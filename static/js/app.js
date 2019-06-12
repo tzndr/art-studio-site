@@ -2,9 +2,13 @@
 var ViewModel = function() {
   var self = this;
 
+  this.artNightTitle = ko.observable("Alcohol Ink Washer Jewelry");
+
   this.artNightText = ko.observable("Join me on Wednesday, June 26 at Sepia Chapel, Two Rivers, from 6-8:30pm for ALCOHOL INK WASHER JEWELRY!  Who doesn't like to repurpose things?  We have worked with alcohol inks before and this one is different because we are going small and on metal!  You will be creating seven washers, and a few littles for earrings too if you'd like.  It's fun to stack em for a different look.  You are the artists and as usual, color choices and designs are all up to you.  I will walk you through step by step!  Alcohol ink is one of the most unpredictable mediums to work with.  It is SO MUCH FUN!  I will teach you a few different techniques to get different results.  It can become addicting as the layers of ink pile on.  Just think, you will be able to wear your own artwork!  Wire, cording and ear wires will be available too so you will learn a few jewelry techniques as well.  No experience is necessary!  Enjoy a complimentary glass of wine as you create!  $35  Register below!");
 
-  this.artNightDate = ko.observable("Wednesday, June 26th 8:00PM - 9:30PM");
+  this.artNightDate = ko.observable("Wednesday, June 26th");
+
+  this.artNightTime = ko.observable("8:00PM - 9:30PM");
 
   this.artNightLocation = ko.observable("Sepia Chapel 1820 Jefferson St Two Rivers, WI");
 

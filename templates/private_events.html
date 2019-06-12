@@ -9,6 +9,30 @@
     {% block content %}
       {% include "header.html" %}
     {% endblock %}
+    <div class="background-img"></div>
+    <div class="private-event-container">
+      <div class="private-event-text-wrapper">
+        <p class="private-event-text" data-bind="text: privateEventText"></p>
+        <p class ="private-event-text" data-bind="text: privateEventText2"></p>
+        <p class ="private-event-text" data-bind="text: privateEventText3"></p>
+        <h1 class="private-event-form-header">Let's discuss your Private Event!</h1>
+        <form class="private-event-form" action="mailto:zander.tim@gmail.com"
+              method="post" enctype="text/plain">
+          <input class="private-event-input" placeholder="Name">
+          <input class="private-event-input" placeholder="Email or Phone Number">
+          <textarea class="private-event-input" placeholder="Short description of your event"
+                    rows="5"></textarea>
+          <button class="private-event-form-btn" type="submit">Submit</button>
+        </form>
+      </div>
+      <div class=private-event-img-wrapper>
+        <img class="private-event-img" src="../static/img/private_event/pe_2.png">
+        <div class="private-event-img-wrapper-2">
+          <img class="private-event-img-2" src="../static/img/private_event/pe_4.png">
+          <img class="private-event-img-3" src="../static/img/private_event/pe_5.png">
+        </div>
+      </div>
+    </div>
     <script src="../static/js/libs/knockout-3.2.0.js"></script>
     <script src="../static/js/model.js"></script>
     <script src="../static/js/app.js"></script>

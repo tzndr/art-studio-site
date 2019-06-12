@@ -9,12 +9,14 @@
     {% block content %}
       {% include "header.html" %}
     {% endblock %}
+    <div class="background-img"></div>
     <div class="about-container">
       <img class="about-main-img" src="../static/img/about/about_amy_headshot.jpg">
       <div class="about-main-text-wrapper">
         <p class="about-main-quote" data-bind="text: aboutAmyQuote"></p>
         <p class="about-main-text" data-bind="text: aboutAmyText"></p>
         <p class="about-main-text-2" data-bind="text: aboutAmyText2"></p>
+        <p class="about-main-text-3" data-bind="text: aboutAmyText3"></p>
       </div>
     </div>
     <script src="../static/js/libs/knockout-3.2.0.js"></script>
