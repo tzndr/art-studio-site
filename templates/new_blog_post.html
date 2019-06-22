@@ -16,7 +16,7 @@
         <input class="add-blog-input" placeholder="Article Title" name="title" required>
         <input class="add-blog-input" placeholder="Subtitle (optional)" name="subtitle">
         <input class="add-blog-input" placeholder="Author" name="author" value="Amy Zander" required>
-        <input class="add-blog-input" placeholder="Image File Name" name="img" required>
+        <input class="add-blog-input" placeholder="Image File Name" name="img" value="../static/img/blog/" required>
         <input class="add-blog-input" placeholder="Publish Date" name="date" required>
         <input class="add-blog-input-header" placeholder="Paragraph Header 1 (optional)" name="body_header_1">
         <textarea class="add-blog-input-body" placeholder="Paragraph 1" name="body_1" required></textarea>
@@ -28,7 +28,10 @@
         <textarea class="add-blog-input-body" placeholder="Paragraph 4 (optional)" name="body_4"></textarea>
         <input class="add-blog-input-header" placeholder="Paragraph Header 5 (optional)" name="body_header_5">
         <textarea class="add-blog-input-body" placeholder="Paragraph 5 (optional)" name="body_5"></textarea>
-        <input class="add-blog-submit-btn" type="submit" value="Post to Blog">
+        <span class="add-blog-btn-wrapper">
+          <input class="add-blog-submit-btn" type="submit" value="Post to Blog">
+          <a href="{{url_for('showBlog')}}" class="add-blog-cancel-btn">Cancel</a>
+        </span>
       </form>
     </div>
     <script src="../static/js/libs/knockout-3.2.0.js"></script>

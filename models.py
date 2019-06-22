@@ -55,7 +55,7 @@ class Item(Base):
 
 
 class BlogPost(Base):
-    __tablename__ = 'blog_post'
+    __tablename__ = 'blogPost'
 
     title = Column(String(100), nullable = False)
     subtitle = Column(String(100))

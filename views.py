@@ -66,8 +66,8 @@ def newBlogPost():
     else:
         return render_template('new_blog_post.html', posts = posts)
 
-@app.route('/blog/<int: blogPost_id>/delete', methods=['GET', 'POST'])
-def deleteBlogPost(blog_post_id):
+@app.route('/blog/<int:blogPost_id>/delete/', methods=['GET', 'POST'])
+def deleteBlogPost(blogPost_id):
     deletedPost = session.query(BlogPost).filter_by(id=blogPost_id).one()
     if request.method == 'POST':
         session.delete(deletedPost)
