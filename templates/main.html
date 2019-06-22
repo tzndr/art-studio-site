@@ -6,32 +6,44 @@
     <link rel="stylesheet" type="text/css" href="../static/css/style.css">
     <title>Amy Zander Studio and Events</title>
   </head>
-  <body style="background-color: #EAECEB">
+  <div class="background-img"></div>
     <div class="main-container-main">
-      <img class="home-circle-1"
-           src="../static/img/homepage/painted_hands_group.png"></img>
-      <img class="home-circle-2"
-           src="../static/img/homepage/pendant_making.png"></img>
+      <a href="{{url_for('showAboutAmy')}}">
+        <img class="home-circle-1" src="../static/img/homepage/about_me_thumbnail.png">
+      </a>
+      <a href="{{url_for('showArtNight')}}">
+        <img class="home-circle-2" src="../static/img/homepage/art_night_thumbnail.png">
+      </a>
       <img class="home-circle-3"
-           src="../static/img/homepage/alcohol_pendants.png"></img>
+           src="../static/img/homepage/art_night_group-2.png">
       <img class="home-circle-4"
-           src="../static/img/homepage/red_painting.png"></img>
-      <img class="home-circle-5"
-           src="../static/img/homepage/art_night_group.png"></img>
-      <img class="home-circle-6"
-            src="../static/img/homepage/bright_swirls_half.png"></img>
+           src="../static/img/homepage/painted_hands_group-2.png">
+      <a class="nav-button-wrapper" href="{{url_for('showArtNight')}}">
+        <img class="home-circle-5" src="../static/img/homepage/art_night_2.png">
+      </a>
+      <a href="{{url_for('showReachAmy')}}">
+        <img class="home-circle-6" src="../static/img/homepage/contact_thumbnail.png">
+      </a>
       <img class="home-circle-7"
-            src="../static/img/homepage/pendant_making_2_half.png"></img>
-      <img class="home-circle-8"
-            src="../static/img/homepage/fingers_paint.png"></img>
+            src="../static/img/homepage/pendant_making_2.png">
+      <a href="{{url_for('showBlog')}}">
+        <img class="home-circle-8" src="../static/img/homepage/blog_thumbnail.png">
+      </a>
       <img class="home-circle-9"
-            src="../static/img/homepage/blue_sunflower.png"></img>
+            src="../static/img/homepage/blue_sunflower-3.png">
+      <img class="home-circle-10"
+            src="../static/img/homepage/pendant_making-2.png">
+      <a href="{{url_for('showPrivateEvents')}}">
+        <img class="home-circle-11"
+             src="../static/img/homepage/private_event_thumbnail.png">
+      </a>
+      <img class="home-circle-12" src="../static/img/homepage/gus-2.png">
+      <a href="{{url_for('showCatalog')}}">
+        <img class="home-circle-13"
+             src="../static/img/homepage/shop_thumbnail.png">
+      </a>
       <img class="home-logo"
             src="../static/img/homepage/home_logo.png"></img>
-      <a href="{{url_for('showStudio')}}">
-        <img class="enter-studio-main" src="../static/img/homepage/enter_studio.png">
-      </a>
-    </div>
     <script src="../static/js/libs/knockout-3.2.0.js"></script>
     <script src="../static/js/model.js"></script>
     <script src="../static/js/app.js"></script>

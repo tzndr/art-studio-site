@@ -30,6 +30,10 @@ var ViewModel = function() {
 
   this.artNightDateText3 = ko.observable("Wednesday, August 25th 2019");
 
+  this.toggleAddBlogPane = ko.observable(true);
+
+  this.togglePageMask = ko.observable(true);
+
   this.resetNavImgs = function() {
     if (self.aboutAmyNavImg() != "../static/img/studio/about_me_thumbnail.png") {
       self.aboutAmyNavImg("../static/img/studio/about_me_thumbnail.png");
@@ -85,6 +89,10 @@ var ViewModel = function() {
     self.resetNavImgs();
     self.contactNavImg("../static/img/studio/contact_thumbnail_selected.png");
     return true;
+  }
+
+  this.addBlog = function() {
+
   }
 }
 

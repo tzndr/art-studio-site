@@ -9,6 +9,35 @@
     {% block content %}
       {% include "header.html" %}
     {% endblock %}
+    {%for post in posts%}
+      <article class="blog-container">
+        <header>
+          <h1 class="blog-title">{{post.title}}</h1>
+          <h2 class="blog-subtitle">{{post.subtitle}}</h2>
+          <p class="blog-author">By: {{post.author}}
+            <span><time class="blog-date">Published: {{post.date}}</time></span>
+
+            <span class="edit-delete-blog-btn-wrapper">
+              <a class="blog-post-edit-btn" href="#">Edit</a>
+              <a class="blog-post-delete-btn" href="{{url_for('deleteBlogPost',
+                blog_post_id=post.id)}}">Delete</a>
+            </span>
+          </p>
+        </header>
+        <img class="blog-img" src="{{post.img}}">
+        <h3 class="blog-body-header">{{post.body_header_1}}</h3>
+        <p class="blog-body">{{post.body_1}}</p>
+        <h3 class="blog-body-header">{{post.body_header_2}}</h3>
+        <p class="blog-body">{{post.body_2}}</p>
+        <h3 class="blog-body-header">{{post.body_header_3}}</h3>
+        <p class="blog-body">{{post.body_3}}</p>
+        <h3 class="blog-body-header">{{post.body_header_4}}</h3>
+        <p class="blog-body">{{post.body_4}}</p>
+        <h3 class="blog-body-header">{{post.body_header_5}}</h3>
+        <p class="blog-body">{{post.body_5}}</p>
+        <hr class=blog-hr>
+      </article>
+    {%endfor%}
     <script src="../static/js/libs/knockout-3.2.0.js"></script>
     <script src="../static/js/model.js"></script>
     <script src="../static/js/app.js"></script>
