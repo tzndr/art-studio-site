@@ -9,6 +9,7 @@
     {% block content %}
       {% include "header.html" %}
     {% endblock %}
+    <a href="{{url_for('newBlogPost')}}" class="add-new-blog-post-btn">Add New Blog Post</a>
     {%for post in posts%}
       <article class="blog-container">
         <header>
@@ -18,7 +19,7 @@
             <span><time class="blog-date">Published: {{post.date}}</time></span>
 
             <span class="edit-delete-blog-btn-wrapper">
-              <a class="blog-post-edit-btn" href="#">Edit</a>
+              <a class="blog-post-edit-btn" href="{{url_for('editBlogPost', blogPost_id=post.id)}}">Edit</a>
               <a class="blog-post-delete-btn" href="{{url_for('deleteBlogPost',
                 blogPost_id=post.id)}}">Delete</a>
             </span>
