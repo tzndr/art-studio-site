@@ -1,4 +1,4 @@
-var aboutAmyQuote = "\"Creativity is the way we share our souls with the world.\"";
+var aboutAmyQuote = "Creativity is the way we share our souls with the world";
 
 var aboutAmyText = "For artist Amy Zander, creating art is like breathing - a must " +
 "have for everyday life. \“I’ve been creating for as long as I can remember\”, she " +
