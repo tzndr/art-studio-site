@@ -924,6 +924,17 @@ box-shadow: 0 13px 16px 0 rgba(0, 0, 0, 0.50),
   margin: auto;
 }
 
+.flash {
+  width: 100%;
+  height: auto;
+  padding: 10px;
+  margin: 85px auto;
+  font: 18pt bold helvetica, arial;
+  color: white;
+  background-color: red;
+  text-align: center;
+}
+
 @media screen and (max-width: 1000px) {
   .name-main {
     font: bold 25pt helvetica, arial;

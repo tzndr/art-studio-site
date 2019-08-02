@@ -9,6 +9,15 @@
     {% block content %}
       {% include "header.html" %}
     {% endblock %}
+    {%with messages = get_flashed_messages()%}
+      {%if messages%}
+        {%for message in messages%}
+          <div class="flash">
+            {{message}}
+          </div>
+        {%endfor%}
+      {%endif%}
+    {%endwith%}
     <a href="{{url_for('newBlogPost')}}" class="add-new-blog-post-btn">Add New Blog Post</a>
     {%for post in posts%}
       <article class="blog-container">

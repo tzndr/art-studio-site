@@ -44,8 +44,7 @@ def gconnect():
 
     # Check that the access token is valid.
     access_token = credentials.access_token
-    url = ('https://www.googleapis.com/oauth2/v1/tokeninfo?access_token=%s'
-           % access_token)
+    url = ('https://www.googleapis.com/oauth2/v1/tokeninfo?access_token=' + access_token)
     h = httplib2.Http()
     result = json.loads(h.request(url, 'GET')[1])
     # If there was an error in the access token info, abort.
@@ -73,7 +72,7 @@ def gconnect():
     stored_access_token = login_session.get('access_token')
     stored_gplus_id = login_session.get('gplus_id')
     if stored_access_token is not None and gplus_id == stored_gplus_id:
-        response = make_response(json.dumps('Current user is already connected.'),
+        response = make_response(json.dumps('Current user is already connected.' + access_token),
                                  200)
         response.headers['Content-Type'] = 'application/json'
         return response
@@ -118,7 +117,7 @@ def gdisconnect():
     print('In gdisconnect access token is %s', access_token)
     print('User name is: ')
     print(login_session['email'])
-    url = 'https://accounts.google.com/o/oauth2/revoke?token=%s' % login_session['access_token']
+    url = 'https://accounts.google.com/o/oauth2/revoke?token=' + access_token
     h = httplib2.Http()
     result = h.request(url, 'GET')[0]
     print('result is ')
@@ -127,16 +126,17 @@ def gdisconnect():
         del login_session['access_token']
         del login_session['gplus_id']
         del login_session['email']
-        del login_session['email']
         del login_session['picture']
         response = make_response(json.dumps('Successfully disconnected.'), 200)
         response.headers['Content-Type'] = 'application/json'
         return response
     else:
-        response = make_response(json.dumps('Failed to revoke token for given user.', 400))
+        response = make_response(json.dumps('Failed to revoke token for given user.' + "------" + access_token + "------"),400)
         response.headers['Content-Type'] = 'application/json'
         return response
 
+        #.ya29.GltAB3YKyssM2IOs0UYHsrC8EYkLL2IEgPvkXpNfQYAduJo-EqltfDr3gHFs-
+        #9WQENRNfRNIMDwkZW3nMQfPEOwPqSY1_XZ8ps5WCMtFNKq62tS-S1uaymIC4s9P
 
 @app.route('/login')
 def showLogin():

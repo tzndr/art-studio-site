@@ -6,7 +6,17 @@
     <link rel="stylesheet" type="text/css" href="../static/css/style.css">
     <title>Amy Zander Studio and Events</title>
   </head>
-  <div class="background-img"></div>
+  <body>
+    {%with messages = get_flashed_messages()%}
+      {%if messages%}
+        {%for message in messages%}
+          <div class="flash">
+            {{message}}
+          </div>
+        {%endfor%}
+      {%endif%}
+    {%endwith%}
+    <div class="background-img"></div>
     <div class="main-container-main">
       <a href="{{url_for('showAboutAmy')}}">
         <img class="home-circle-1" src="../static/img/homepage/about_me_thumbnail.png">
@@ -42,6 +52,7 @@
       </a>
       <img class="home-logo"
             src="../static/img/homepage/home_logo.png"></img>
+    </div>
     <script src="../static/js/libs/knockout-3.2.0.js"></script>
     <script src="../static/js/model.js"></script>
     <script src="../static/js/app.js"></script>
