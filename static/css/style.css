@@ -23,6 +23,23 @@ a {
   background-repeat: no-repeat;
 }
 
+.flash {
+  width: 100%;
+  height: auto;
+  padding: 10px;
+  margin: 85px auto;
+  font: 18pt bold helvetica, arial;
+  color: white;
+  background-color: red;
+  text-align: center;
+  z-index: 1;
+}
+
+.login-result {
+  text-align: center;
+  font: 16pt helvetica, arial;
+}
+
 .main-container {
   display: flex;
   min-height: 100%;
@@ -914,25 +931,6 @@ box-shadow: 0 13px 16px 0 rgba(0, 0, 0, 0.50),
   display: block;
   text-align: center;
   margin: 100px auto;
-}
-
-.g-signin2{
-  width: 100%;
-}
-
-.g-signin2 > div{
-  margin: auto;
-}
-
-.flash {
-  width: 100%;
-  height: auto;
-  padding: 10px;
-  margin: 85px auto;
-  font: 18pt bold helvetica, arial;
-  color: white;
-  background-color: red;
-  text-align: center;
 }
 
 @media screen and (max-width: 1000px) {

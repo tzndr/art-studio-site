@@ -7,15 +7,15 @@
     <title>Amy Zander Studio and Events</title>
   </head>
   <body>
-    {%with messages = get_flashed_messages()%}
-      {%if messages%}
-        {%for message in messages%}
-          <div class="flash">
-            {{message}}
-          </div>
-        {%endfor%}
-      {%endif%}
-    {%endwith%}
+    <div>
+      {%with messages = get_flashed_messages()%}
+        {%if messages%}
+          {%for message in messages%}
+            <div class="flash">{{message}}</div>
+          {%endfor%}
+        {%endif%}
+      {%endwith%}
+    </div>
     <div class="background-img"></div>
     <div class="main-container-main">
       <a href="{{url_for('showAboutAmy')}}">

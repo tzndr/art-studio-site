@@ -93,12 +93,12 @@ def gconnect():
     login_session['email'] = data['email']
 
     output = ''
-    output += '<h1>Welcome, '
+    output += '<h1 style = "text-align: center;">Welcome, '
     output += login_session['email']
     output += '!</h1>'
     output += '<img src="'
     output += login_session['picture']
-    output += ' " style = "width: 300px; height: 300px;border-radius: 150px;-webkit-border-radius: 150px;-moz-border-radius: 150px;"> '
+    output += ' "style = "text-align: center; width: 300px; height: 300px; border-radius: 150px; -webkit-border-radius: 150px; -moz-border-radius: 150px;"> '
     flash("you are now logged in as %s" % login_session['email'])
     print("done!")
     return output
@@ -114,10 +114,9 @@ def gdisconnect():
         response = make_response(json.dumps('Current user not connected.'), 401)
         response.headers['Content-Type'] = 'application/json'
         return response
-    print('In gdisconnect access token is %s', access_token)
-    print('User name is: ')
-    print(login_session['email'])
-    url = 'https://accounts.google.com/o/oauth2/revoke?token=' + access_token
+    print('In gdisconnect access token is %s' % access_token)
+    print('username is: %s' % login_session['email'])
+    url = 'https://accounts.google.com/o/oauth2/revoke?token=' + login_session['access_token']
     h = httplib2.Http()
     result = h.request(url, 'GET')[0]
     print('result is ')
@@ -127,16 +126,14 @@ def gdisconnect():
         del login_session['gplus_id']
         del login_session['email']
         del login_session['picture']
-        response = make_response(json.dumps('Successfully disconnected.'), 200)
-        response.headers['Content-Type'] = 'application/json'
-        return response
+        response = make_response(json.dumps('Disconnected.'), 200)
+        redirect('/')
+        flash("You have successfully logged out")
+        return redirect('/')
     else:
         response = make_response(json.dumps('Failed to revoke token for given user.' + "------" + access_token + "------"),400)
         response.headers['Content-Type'] = 'application/json'
         return response
-
-        #.ya29.GltAB3YKyssM2IOs0UYHsrC8EYkLL2IEgPvkXpNfQYAduJo-EqltfDr3gHFs-
-        #9WQENRNfRNIMDwkZW3nMQfPEOwPqSY1_XZ8ps5WCMtFNKq62tS-S1uaymIC4s9P
 
 @app.route('/login')
 def showLogin():
