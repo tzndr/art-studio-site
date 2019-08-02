@@ -106,7 +106,7 @@ def gconnect():
     # DISCONNECT - Revoke a current user's token and reset their login_session
 
 
-@app.route('/gdisconnect')
+@app.route('/logout')
 def gdisconnect():
     access_token = login_session.get('access_token')
     if access_token is None:

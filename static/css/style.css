@@ -24,20 +24,19 @@ a {
 }
 
 .flash {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
   width: 100%;
   height: auto;
   padding: 10px;
-  margin: 85px auto;
+  margin: auto;
   font: 18pt bold helvetica, arial;
   color: white;
   background-color: red;
   text-align: center;
-  z-index: 1;
-}
-
-.login-result {
-  text-align: center;
-  font: 16pt helvetica, arial;
 }
 
 .main-container {
@@ -930,7 +929,22 @@ box-shadow: 0 13px 16px 0 rgba(0, 0, 0, 0.50),
   width: 40%;
   display: block;
   text-align: center;
-  margin: 100px auto;
+  margin: 100px auto auto auto;
+}
+
+.signin-btn {
+  margin: 100px auto auto auto;
+  font: bold 22pt helvetica, arial;
+  background-color: #9932CC;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.login-result {
+  text-align: center;
+  font: bold 22pt helvetica, arial;
+  color: #9932CC;
 }
 
 @media screen and (max-width: 1000px) {
