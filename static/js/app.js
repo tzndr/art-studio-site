@@ -69,7 +69,7 @@ var ViewModel = function() {
 
   this.changeSrcAttrShop = function() {
     self.resetNavImgs();
-    self.shopNavImg("../static/img/studio/shop_thumbnail_selected.png");
+    self.shopNavImg("../static/img/studio/art_studio.png");
     return true;
   }
 

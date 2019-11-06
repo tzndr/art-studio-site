@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="../../static/css/style.css">
+    <link rel="shortcut icon" href="../../static/img/about/about_amy_headshot.png">
+    <link rel="image_src" href="../../static/img/about/about_amy_headshot.png">
+    <meta property="og:title" content="{{selected_post.title}}">
+    <meta property="og:image" content="{{selected_post.authorImg}}">
+    <meta property="og:description"
+          content="{{selected_post.subtitle}}">
+    <meta property="og:url" content="www.amyzander.com/blog/" + {{selected_post.id}} + "/read">
+    <title>{{selected_post.title}}</title>
+  </head>
+  <body>
+    {% block content %}
+      {% include "header_deep.html" %}
+    {% endblock %}
+    <article class="blog-container">
+      <header>
+        <h1 class="blog-title">{{selected_post.title}}</h1>
+        <h2 class="blog-subtitle">{{selected_post.subtitle}}</h2>
+        <div class="blog-details-wrapper">
+          <div class="blog-author-info-wrapper">
+            <img class="blog-author-img" src="../{{selected_post.authorImg}}">
+            <div class="blog-author-img-name-wrapper">
+              <p class="blog-author-name">By: {{selected_post.authorName}}</p>
+              <p class="blog-author-description">{{selected_post.authorDescription}}</p>
+            </div>
+          </div>
+          <div class="blog-date-cat-wrapper">
+            <time class="blog-date-cat">Published: {{selected_post.date}}</time>
+            <hr class="blog-post-pub-cat-hr">
+            <p class="blog-date-cat">Filed under: {{selected_post.category}}</p>
+          </div>
+        </div>
+        <div class="social-btn-wrapper-blog">
+          <div>
+            <a
+              href="https://twitter.com/share?ref_src=twsrc%5Etfw"
+              class="twitter-share-button"
+              data-show-count="false">Tweet
+            </a>
+          </div>
+          <div class="fb-share-button"
+               data-href="http://timzander.com/blog/{{selected_post.id}}/read"
+               data-layout="button">
+          </div>
+          <script src="https://platform.linkedin.com/in.js" type="text/javascript">lang: en_US</script>
+          <script type="IN/Share" data-url="https://www.linkedin.com"></script>
+          <div class="email-share-btn">
+            <a href="mailto:?subject=Check out this article&amp;body={{selected_post.title}}: http://timzander.com/blog/{{selected_post.id}}/read">
+              <img class="email-share-btn-img" src="../../static/img/email_blog.png">
+              <p class="email-share-btn-text">Email</p>
+            </a>
+          </div>
+        </div>
+        <img class="blog-main-img" src="../{{selected_post.mainImg}}">
+      </header>
+      {%if selected_post.body_header_1%}
+        <h3 class="blog-body-header">{{selected_post.body_header_1}}</h3>
+      {%endif%}
+      {%if selected_post.body_1%}
+        <p class="blog-body">{{selected_post.body_1}}</p>
+      {%endif%}
+      {%if selected_post.img_2%}
+        <img class="blog-img" src="../{{selected_post.img_2}}">
+      {%endif%}
+      {%if selected_post.body_header_2%}
+        <h3 class="blog-body-header">{{selected_post.body_header_2}}</h3>
+      {%endif%}
+      {%if selected_post.body_2%}
+        <p class="blog-body">{{selected_post.body_2}}</p>
+      {%endif%}
+      {%if selected_post.img_3%}
+        <img class="blog-img" src="../{{selected_post.img_3}}">
+      {%endif%}
+      {%if selected_post.body_header_3%}
+        <h3 class="blog-body-header">{{selected_post.body_header_3}}</h3>
+      {%endif%}
+      {%if selected_post.body_3%}
+        <p class="blog-body">{{selected_post.body_3}}</p>
+      {%endif%}
+      {%if selected_post.img_4%}
+        <img class="blog-img" src="../{{selected_post.img_4}}">
+      {%endif%}
+      {%if selected_post.body_header_4%}
+        <h3 class="blog-body-header">{{selected_post.body_header_4}}</h3>
+      {%endif%}
+      {%if selected_post.body_4%}
+        <p class="blog-body">{{selected_post.body_4}}</p>
+      {%endif%}
+      {%if selected_post.img_5%}
+        <img class="blog-img" src="../{{selected_post.img_5}}">
+      {%endif%}
+      {%if selected_post.body_header_5%}
+        <h3 class="blog-body-header">{{selected_post.body_header_5}}</h3>
+      {%endif%}
+      {%if selected_post.body_5%}
+        <p class="blog-body">{{selected_post.body_5}}</p>
+      {%endif%}
+      {%if selected_post.img_6%}
+        <img class="blog-img" src="../{{selected_post.img_6}}">
+      {%endif%}
+      {%if selected_post.body_header_6%}
+        <h3 class="blog-body-header">{{selected_post.body_header_6}}</h3>
+      {%endif%}
+      {%if selected_post.body_6%}
+        <p class="blog-body">{{selected_post.body_6}}</p>
+      {%endif%}
+      {%if selected_post.img_7%}
+        <img class="blog-img" src="../{{selected_post.img_7}}">
+      {%endif%}
+      {%if selected_post.body_header_7%}
+        <h3 class="blog-body-header">{{selected_post.body_header_7}}</h3>
+      {%endif%}
+      {%if selected_post.body_7%}
+        <p class="blog-body">{{selected_post.body_7}}</p>
+      {%endif%}
+      {%if selected_post.img_8%}
+        <img class="blog-img" src="../{{selected_post.img_8}}">
+      {%endif%}
+      {%if selected_post.body_header_8%}
+        <h3 class="blog-body-header">{{selected_post.body_header_8}}</h3>
+      {%endif%}
+      {%if selected_post.body_8%}
+        <p class="blog-body">{{selected_post.body_8}}</p>
+      {%endif%}
+      {%if selected_post.img_9%}
+        <img class="blog-img" src="../{{selected_post.img_9}}">
+      {%endif%}
+      {%if selected_post.body_header_9%}
+        <h3 class="blog-body-header">{{selected_post.body_header_9}}</h3>
+      {%endif%}
+      {%if selected_post.body_9%}
+        <p class="blog-body">{{selected_post.body_9}}</p>
+      {%endif%}
+      {%if selected_post.img_10%}
+        <img class="blog-img" src="../{{selected_post.img_10}}">
+      {%endif%}
+      {%if selected_post.body_header_10%}
+        <h3 class="blog-body-header">{{selected_post.body_header_10}}</h3>
+      {%endif%}
+      {%if selected_post.body_10%}
+        <p class="blog-body">{{selected_post.body_10}}</p>
+      {%endif%}
+    </article>
+    <div class="social-btn-wrapper-blog">
+      <div>
+        <a
+          href="https://twitter.com/share?ref_src=twsrc%5Etfw"
+          class="twitter-share-button"
+          data-show-count="false">Tweet
+        </a>
+      </div>
+      <div class="fb-share-button"
+           data-href="http://timzander.com/blog/{{selected_post.id}}/read"
+           data-layout="button">
+      </div>
+      <script src="https://platform.linkedin.com/in.js" type="text/javascript">lang: en_US</script>
+      <script type="IN/Share" data-url="https://www.linkedin.com"></script>
+      <div class="email-share-btn">
+        <a href="mailto:?subject=Check out this article&amp;body={{selected_post.title}}: http://amyzander.com/blog/{{selected_post.id}}/read">
+          <img class="email-share-btn-img" src="../../static/img/email_blog.png">
+          <p class="email-share-btn-text">Email</p>
+        </a>
+      </div>
+    </div>
+    <div class="blog-footer">
+      <div class=blog-footer-content>
+        <img class="blog-footer-author-img" src="../../static/img/contact_me/portrait.png">
+        <p class="blog-footer-author-description">Amy is a professional artist and
+          an experienced, in-demand instructor who has taught
+          classes at the Rahr West Art Museum in Manitowoc, Wisconsin for the American Fired Art
+          Alliance and hosts her locally popular “Art Night”. She has been published in Fired Arts
+          Magazine, Lakeshore You Magazine and featured on the cover of Ceramics Art
+          & Crafts Magazine. Amy also provides private events and fundraisers. If you'd like
+          to reach out to Amy regarding custom art, orders, or a personal event you can
+          view her contact information
+          <a class="blog-foooter-connect-link" href="{{url_for('showReachAmy')}}">here</a>.</p>
+      </div>
+    </div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+    <script src="../../static/js/libs/knockout-3.2.0.js"></script>
+    <script src="../../static/js/model.js"></script>
+    <script src="../../static/js/app.js"></script>
+    <script src="../../static/js/libs/jquery.min.js"></script>
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    <script>
+      $(function() {
+        $('#flash-message').delay(500).fadeIn('normal', function() {
+          $(this).delay(2000).fadeOut();
+        });
+      });
+    </script>
+  </body>
+</html>

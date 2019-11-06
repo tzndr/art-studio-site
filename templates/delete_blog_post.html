@@ -6,12 +6,15 @@
     <link rel="stylesheet" type="text/css" href="../../../static/css/style.css">
   </head>
   <body>
-    <h1 class="delete-blog-post-header">Delete "{{deletedPost.title}}" from your blog?</h1>
-    <form action="{{url_for('deleteBlogPost', blogPost_id=blogPost_id)}}" method="POST">
-      <span class="delete-blog-post-btn-wrapper">
-        <a href="{{url_for('showBlog')}}" class="cancel-delete-blog-btn">Cancel</a>
-        <input class="delete-blog-btn" type="submit" value="Delete">
-      </span>
-    </form>
+    <div class="background-img-2"></div>
+    <div class="delete-blog-post-container">
+      <h1 class="delete-blog-post-header">Delete "{{deletedPost.title}}" from your blog?</h1>
+      <form action="{{url_for('deleteBlogPost', blogPost_id=blogPost_id)}}" method="POST">
+        <div class="del-blog-btn-wrapper">
+          <a href="{{url_for('showBlog')}}" class="del-blog-cancel-btn">Cancel</a>
+          <input class="del-blog-submit-btn" type="submit" value="Delete">
+        </div>
+      </form>
+    </div>
   </body>
 </html>

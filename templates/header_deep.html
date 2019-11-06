@@ -3,52 +3,52 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="../static/css/style.css">
+    <link rel="stylesheet" type="text/css" href="../../static/css/style.css">
   </head>
   <body>
     <a href="{{url_for('showMain')}}">
-      <img class="header-logo" src="../static/img/homepage/home_logo.png">
+      <img class="header-logo" src="../../static/img/homepage/home_logo.png">
     </a>
     <div class="header-container">
       <div class='nav-bar'>
-        <a href="{{url_for('showAboutAmy')}}">
+        <a data-bind="click: changeSrcAttrAboutAmy" href="{{url_for('showAboutAmy')}}">
           <span>
-            <img class="nav-link" src="../static/img/studio/about_me_thumbnail.png">
+            <img class="nav-link" src="../../static/img/studio/about_me_thumbnail.png">
           </span>
         </a>
         <span>
           <a href="{{url_for('showArtNight')}}">
-            <img class="nav-link" src="../static/img/studio/art_night_thumbnail.png">
+            <img class="nav-link" src="../../static/img/studio/art_night_thumbnail.png">
           </a>
         </span>
         <span>
           <a href="{{url_for('showCatalog')}}">
-            <img class="nav-link" src="../static/img/studio/shop_thumbnail.png">
+            <img class="nav-link" src="../../static/img/studio/shop_thumbnail.png">
           </a>
         </span>
         <span>
           <a href="{{url_for('showPrivateEvents')}}">
-            <img class="nav-link" src="../static/img/studio/private_event_thumbnail.png">
+            <img class="nav-link" src="../../static/img/studio/private_event_thumbnail.png">
           </a>
         </span>
         <span>
           <a href="{{url_for('showBlog')}}">
-            <img class="nav-link" src="../static/img/studio/blog_thumbnail.png">
+            <img class="nav-link" src="../../static/img/studio/blog_thumbnail.png">
           </a>
         </span>
         <span>
           <a href="{{url_for('showReachAmy')}}">
-            <img class="nav-link" src="../static/img/studio/contact_thumbnail.png">
+            <img class="nav-link" src="../../static/img/studio/contact_thumbnail.png">
           </a>
         </span>
       </div>
     </div>
     <div class="social-btn-wrapper">
       <span><a href ="https://www.facebook.com/Art-Night-1596988327179714/">
-        <img class="social-btn-header" src="../static/img/fb_header.png">
+        <img class="social-btn-header" src="../../static/img/fb_header.png">
       </a></span>
       <span><a href="https://www.instagram.com/amyzanderstudio/">
-        <img class="social-btn-header" src="../static/img/ig_header.png">
+        <img class="social-btn-header" src="../../static/img/ig_header.png">
       </a></span>
     </div>
   </body>

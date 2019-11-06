@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="../../static/css/style.css">
+    <link rel="shortcut icon" href="../../static/img/tz.png">
+    <link rel="image_src" href="../../static/img/tz.png">
+
+    <title>Blog: {{returned_cat}}</title>
+  </head>
+  <body>
+    <div class="background-img-2"></div>
+    {% block content %}
+      {% include "header_deep.html" %}
+    {% endblock %}
+    <h1 class="blog-recent-posts-header">Posts Filed Under: {{returned_cat}}</h1>
+    <div class="blog-cat-thumbnail-container">
+    {%for post in selected_cat%}
+      <a href="{{url_for('readBlogPost', blogPost_id=post.id)}}">
+        <div class="blog-thumbnail">
+          <p class="blog-thumbnail-header">{{post.title}}</p>
+          <img class="blog-thumbnail-img" src="../{{post.mainImg}}">
+          <p class="blog-thumbnail-category">{{post.category}}</p>
+          <p class="blog-thumbnail-date">{{post.date}}</p>
+        </div>
+      </a>
+    {%endfor%}
+    <script src="../../static/js/libs/knockout-3.2.0.js"></script>
+    <script src="../../static/js/model.js"></script>
+    <script src="../../static/js/app.js"></script>
+    <script src="../../static/js/libs/jquery.min.js"></script>
+  </body>
+</html>

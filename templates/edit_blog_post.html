@@ -3,35 +3,169 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="../../../static/css/style.css">
+    <link rel="stylesheet" type="text/css" href="../../static/css/style.css">
   </head>
   <body>
+    <div class="background-img-2"></div>
     {% block content %}
-      {% include "header.html" %}
+      {% include "header_deep.html" %}
     {% endblock %}
-    <div class="page-mask" data-bind="visible: togglePageMask"></div>
-    <div class="add-blog-post-pane" data-bind="visible: toggleAddBlogPane">
+    <div class="add-blog-post-container">
       <h1 class="add-blog-post-title">Edit Blog Post</h1>
       <form class="add-blog-post-form" action="{{url_for('editBlogPost', blogPost_id=blogPost_id)}}" method="POST">
-        <input class="add-blog-input" placeholder="Article Title" name="title" value="{{editedPost.title}}" required>
-        <input class="add-blog-input" placeholder="Subtitle (optional)" name="subtitle" value="{{editedPost.subtitle}}">
-        <input class="add-blog-input" placeholder="Author" name="author" value="Amy Zander" value="{{editedPost.author}}" required>
-        <input class="add-blog-input" placeholder="Image File Name" name="img" value="{{editedPost.img}}" required>
-        <input class="add-blog-input" placeholder="Publish Date" name="date" value="{{editedPost.date}}" required>
-        <input class="add-blog-input-header" placeholder="Paragraph Header 1 (optional)" name="body_header_1" value="{{editedPost.body_header_1}}">
-        <textarea class="add-blog-input-body" placeholder="Paragraph 1" name="body_1" required>{{editedPost.body_1}}</textarea>
-        <input class="add-blog-input-header" placeholder="Paragraph Header 2 (optional)" name="body_header_2" value="{{editedPost.body_header_2}}">
-        <textarea class="add-blog-input-body" placeholder="Paragraph 2 (optional)" name="body_2">{{editedPost.body_2}}</textarea>
-        <input class="add-blog-input-header" placeholder="Paragraph Header 3 (optional)" name="body_header_3" value="{{editedPost.body_header_3}}">
-        <textarea class="add-blog-input-body" placeholder="Paragraph 3 (optional)" name="body_3">{{editedPost.body_3}}</textarea>
-        <input class="add-blog-input-header" placeholder="Paragraph Header 4 (optional)" name="body_header_4" value="{{editedPost.body_header_4}}">
-        <textarea class="add-blog-input-body" placeholder="Paragraph 4 (optional)" name="body_4">{{editedPost.body_4}}</textarea>
-        <input class="add-blog-input-header" placeholder="Paragraph Header 5 (optional)" name="body_header_5" value="{{editedPost.body_header_5}}">
-        <textarea class="add-blog-input-body" placeholder="Paragraph 5 (optional)" name="body_5">{{editedPost.body_5}}</textarea>
-        <span class="add-blog-btn-wrapper">
-          <input class="add-blog-submit-btn" type="submit" value="Edit Post">
-          <a href="{{url_for('showBlog')}}" class="add-blog-cancel-btn">Cancel</a>
-        </span>
+        <input class="add-blog-input"
+               placeholder="Article Title"
+               name="title"
+               value="{{editedPost.title}}"
+               maxlength = "50"
+               required>
+        <input class="add-blog-input"
+               placeholder="Subtitle"
+               name="subtitle"
+               value="{{editedPost.subtitle}}"
+               required>
+        <input class="add-blog-input"
+               placeholder="Author Name"
+               name="authorName"
+               value="{{editedPost.authorName}}"
+               required>
+        <input class="add-blog-input"
+               placeholder="Author Img Path (../static/img/blog/)"
+               name="authorImg"
+               value="{{editedPost.authorImg}}"
+               required>
+        <input class="add-blog-input"
+               placeholder="Author Description"
+               name="authorDescription"
+               value="{{editedPost.authorDescription}}"
+               required>
+        <input class="add-blog-input"
+               placeholder="Main Img Path (../static/img/blog/)"
+               name="mainImg"
+               value="{{editedPost.mainImg}}"
+               required>
+        <input class="add-blog-input"
+               placeholder="Publish Date"
+               name="date"
+               value="{{editedPost.date}}"
+               required>
+        <input class="add-blog-input"
+               placeholder="Category"
+               name="category"
+               value="{{editedPost.category}}">
+        <div class="add-blog-post-input-wrapper">
+          <input class="add-blog-input-header"
+                 placeholder="Paragraph Header 1 (optional)"
+                 name="body_header_1"
+                 value="{{editedPost.body_header_1}}">
+          <textarea class="add-blog-input-body"
+                    placeholder="Paragraph 1"
+                    name="body_1"
+                    required>{{editedPost.body_1}}"</textarea>
+          <input class="add-blog-input-header"
+                 placeholder="Image File Path(../static/img/blog/)"
+                 name="img_2"
+                 value="{{editedPost.img_2}}">
+          <input class="add-blog-input-header"
+                 placeholder="Paragraph Header 2 (optional)"
+                 name="body_header_2"
+                 value="{{editedPost.body_header_2}}">
+          <textarea class="add-blog-input-body"
+                    placeholder="Paragraph 2 (optional)"
+                    name="body_2">{{editedPost.body_2}}</textarea>
+          <input class="add-blog-input-header"
+                 placeholder="Image File Path(../static/img/blog/)"
+                 name="img_3"
+                 value="{{editedPost.img_3}}">
+          <input class="add-blog-input-header"
+                 placeholder="Paragraph Header 3 (optional)"
+                 name="body_header_3"
+                 value="{{editedPost.body_header_3}}">
+          <textarea class="add-blog-input-body"
+                    placeholder="Paragraph 3 (optional)"
+                    name="body_3">{{editedPost.body_3}}</textarea>
+          <input class="add-blog-input-header"
+                 placeholder="Image File Path(../static/img/blog/)"
+                 name="img_4"
+                 value="{{editedPost.img_4}}">
+          <input class="add-blog-input-header"
+                 placeholder="Paragraph Header 4 (optional)"
+                 name="body_header_4"
+                 value="{{editedPost.body_header_4}}">
+          <textarea class="add-blog-input-body"
+                    placeholder="Paragraph 4 (optional)"
+                    name="body_4">{{editedPost.body_4}}</textarea>
+          <input class="add-blog-input-header"
+                 placeholder="Image File Path(../static/img/blog/)"
+                 name="img_5"
+                 value="{{editedPost.img_5}}">
+          <input class="add-blog-input-header"
+                 placeholder="Paragraph Header 5 (optional)"
+                 name="body_header_5"
+                 value="{{editedPost.body_header_5}}">
+          <textarea class="add-blog-input-body"
+                    placeholder="Paragraph 5 (optional)"
+                    name="body_5">{{editedPost.body_5}}</textarea>
+          <input class="add-blog-input-header"
+                 placeholder="Image File Path(../static/img/blog/)"
+                 name="img_6"
+                 value="{{editedPost.img_6}}">
+          <input class="add-blog-input-header"
+                 placeholder="Paragraph Header 6 (optional)"
+                 name="body_header_6"
+                 value="{{editedPost.body_header_6}}">
+          <textarea class="add-blog-input-body"
+                    placeholder="Paragraph 6 (optional)"
+                    name="body_6">{{editedPost.body_6}}</textarea>
+          <input class="add-blog-input-header"
+                 placeholder="Image File Path(../static/img/blog/)"
+                 name="img_7"
+                 value="{{editedPost.img_7}}">
+          <input class="add-blog-input-header"
+                 placeholder="Paragraph Header 7 (optional)"
+                 name="body_header_7"
+                 value="{{editedPost.body_header_7}}">
+          <textarea class="add-blog-input-body"
+                    placeholder="Paragraph 7 (optional)"
+                    name="body_7">{{editedPost.body_7}}</textarea>
+          <input class="add-blog-input-header"
+                 placeholder="Image File Path(../static/img/blog/)"
+                 name="img_8"
+                 value="{{editedPost.img_8}}">
+          <input class="add-blog-input-header"
+                 placeholder="Paragraph Header 8 (optional)"
+                 name="body_header_8"
+                 value="{{editedPost.body_header_8}}">
+          <textarea class="add-blog-input-body"
+                    placeholder="Paragraph 8 (optional)"
+                    name="body_8">{{editedPost.body_8}}</textarea>
+          <input class="add-blog-input-header"
+                 placeholder="Image File Path(../static/img/blog/)"
+                 name="img_9"
+                 value="{{editedPost.img_9}}">
+          <input class="add-blog-input-header"
+                 placeholder="Paragraph Header 9 (optional)"
+                 name="body_header_9"
+                 value="{{editedPost.body_header_9}}">
+          <textarea class="add-blog-input-body"
+                    placeholder="Paragraph 9 (optional)"
+                    name="body_9">{{editedPost.body_9}}</textarea>
+          <input class="add-blog-input-header"
+                 placeholder="Image File Path(../static/img/blog/)"
+                 name="img_10"
+                 value="{{editedPost.img_10}}">
+          <input class="add-blog-input-header"
+                 placeholder="Paragraph Header 10 (optional)"
+                 name="body_header_10"
+                 value="{{editedPost.body_header_10}}">
+          <textarea class="add-blog-input-body"
+                    placeholder="Paragraph 10"
+                    name="body_10">{{editedPost.body_10}}</textarea>
+        </div>
+        <div class="add-blog-btn-wrapper">
+          <input class="add-blog-submit-btn" type="submit" value="Update">
+          <a href="{{url_for('readBlogPost', blogPost_id=blogPost_id)}}" class="add-blog-cancel-btn">Cancel</a>
+        </div>
       </form>
     </div>
     <script src="../static/js/libs/knockout-3.2.0.js"></script>

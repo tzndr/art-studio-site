@@ -6,32 +6,153 @@
     <link rel="stylesheet" type="text/css" href="../static/css/style.css">
   </head>
   <body>
+    <div class="background-img-2"></div>
     {% block content %}
       {% include "header.html" %}
     {% endblock %}
-    <div class="page-mask" data-bind="visible: togglePageMask"></div>
-    <div class="add-blog-post-pane" data-bind="visible: toggleAddBlogPane">
+    <div class="add-blog-post-container">
       <h1 class="add-blog-post-title">Add New Blog Post</h1>
       <form class="add-blog-post-form" action="{{url_for('newBlogPost')}}" method="POST">
-        <input class="add-blog-input" placeholder="Article Title" name="title" required>
-        <input class="add-blog-input" placeholder="Subtitle (optional)" name="subtitle">
-        <input class="add-blog-input" placeholder="Author" name="author" value="Amy Zander" required>
-        <input class="add-blog-input" placeholder="Image File Name" name="img" value="../static/img/blog/" required>
-        <input class="add-blog-input" placeholder="Publish Date" name="date" required>
-        <input class="add-blog-input-header" placeholder="Paragraph Header 1 (optional)" name="body_header_1">
-        <textarea class="add-blog-input-body" placeholder="Paragraph 1" name="body_1" required></textarea>
-        <input class="add-blog-input-header" placeholder="Paragraph Header 2 (optional)" name="body_header_2">
-        <textarea class="add-blog-input-body" placeholder="Paragraph 2 (optional)" name="body_2"></textarea>
-        <input class="add-blog-input-header" placeholder="Paragraph Header 3 (optional)" name="body_header_3">
-        <textarea class="add-blog-input-body" placeholder="Paragraph 3 (optional)" name="body_3"></textarea>
-        <input class="add-blog-input-header" placeholder="Paragraph Header 4 (optional)" name="body_header_4">
-        <textarea class="add-blog-input-body" placeholder="Paragraph 4 (optional)" name="body_4"></textarea>
-        <input class="add-blog-input-header" placeholder="Paragraph Header 5 (optional)" name="body_header_5">
-        <textarea class="add-blog-input-body" placeholder="Paragraph 5 (optional)" name="body_5"></textarea>
-        <span class="add-blog-btn-wrapper">
-          <input class="add-blog-submit-btn" type="submit" value="Post to Blog">
+        <input class="add-blog-input"
+               placeholder="Article Title"
+               name="title"
+               maxlength = "50"
+               required>
+        <input class="add-blog-input"
+               placeholder="Subtitle"
+               name="subtitle"
+               required>
+        <input class="add-blog-input"
+               placeholder="Author Name"
+               name="authorName"
+               value="Amy Zander"
+               required>
+        <input class="add-blog-input"
+               placeholder="Author Img Path (../static/img/contact_me/portrait.png)"
+               name="authorImg"
+               value="../static/img/contact_me/portrait.png"
+               required>
+        <input class="add-blog-input"
+               placeholder="Author Description"
+               name="authorDescription"
+               value="I share art with the world through creating custom work in my studio, hosting Art Night, and leading private events and fundraisers."
+               required>
+        <input class="add-blog-input"
+               placeholder="Main Img Path (../static/img/blog/)"
+               name="mainImg"
+               value=""
+               required>
+        <input class="add-blog-input"
+               placeholder="Publish Date"
+               name="date"
+               required>
+        <input class="add-blog-input"
+               placeholder="Category"
+               name="category"
+               value="">
+        <div class="add-blog-post-input-wrapper">
+          <input class="add-blog-input-header"
+                 placeholder="Paragraph Header 1 (optional)"
+                 name="body_header_1">
+          <textarea class="add-blog-input-body"
+                    placeholder="Paragraph 1"
+                    name="body_1"
+                    required></textarea>
+          <input class="add-blog-input-header"
+                 placeholder="Image File Path(../static/img/blog/)"
+                 name="img_2"
+                 value="">
+          <input class="add-blog-input-header"
+                 placeholder="Paragraph Header 2 (optional)"
+                 name="body_header_2">
+          <textarea class="add-blog-input-body"
+                    placeholder="Paragraph 2 (optional)"
+                    name="body_2"></textarea>
+          <input class="add-blog-input-header"
+                 placeholder="Image File Path(../static/img/blog/)"
+                 name="img_3"
+                 value="">
+          <input class="add-blog-input-header"
+                 placeholder="Paragraph Header 3 (optional)"
+                 name="body_header_3">
+          <textarea class="add-blog-input-body"
+                    placeholder="Paragraph 3 (optional)"
+                    name="body_3"></textarea>
+          <input class="add-blog-input-header"
+                 placeholder="Image File Path(../static/img/blog/)"
+                 name="img_4"
+                 value="">
+          <input class="add-blog-input-header"
+                 placeholder="Paragraph Header 4 (optional)"
+                 name="body_header_4">
+          <textarea class="add-blog-input-body"
+                    placeholder="Paragraph 4 (optional)"
+                    name="body_4"></textarea>
+          <input class="add-blog-input-header"
+                 placeholder="Image File Path(../static/img/blog/)"
+                 name="img_5"
+                 value="">
+          <input class="add-blog-input-header"
+                 placeholder="Paragraph Header 5 (optional)"
+                 name="body_header_5">
+          <textarea class="add-blog-input-body"
+                    placeholder="Paragraph 5 (optional)"
+                    name="body_5"></textarea>
+          <input class="add-blog-input-header"
+                 placeholder="Image File Path(../static/img/blog/)"
+                 name="img_6"
+                 value="">
+          <input class="add-blog-input-header"
+                 placeholder="Paragraph Header 6 (optional)"
+                 name="body_header_6">
+          <textarea class="add-blog-input-body"
+                    placeholder="Paragraph 6 (optional)"
+                    name="body_6"></textarea>
+          <input class="add-blog-input-header"
+                 placeholder="Image File Path(../static/img/blog/)"
+                 name="img_7"
+                 value="">
+          <input class="add-blog-input-header"
+                 placeholder="Paragraph Header 7 (optional)"
+                 name="body_header_7">
+          <textarea class="add-blog-input-body"
+                    placeholder="Paragraph 7 (optional)"
+                    name="body_7"></textarea>
+          <input class="add-blog-input-header"
+                 placeholder="Image File Path(../static/img/blog/)"
+                 name="img_8"
+                 value="">
+          <input class="add-blog-input-header"
+                 placeholder="Paragraph Header 8 (optional)"
+                 name="body_header_8">
+          <textarea class="add-blog-input-body"
+                    placeholder="Paragraph 8 (optional)"
+                    name="body_8"></textarea>
+          <input class="add-blog-input-header"
+                 placeholder="Image File Path(../static/img/blog/)"
+                 name="img_9"
+                 value="">
+          <input class="add-blog-input-header"
+                 placeholder="Paragraph Header 9 (optional)"
+                 name="body_header_9">
+          <textarea class="add-blog-input-body"
+                    placeholder="Paragraph 9 (optional)"
+                    name="body_9"></textarea>
+          <input class="add-blog-input-header"
+                 placeholder="Image File Path(../static/img/blog/)"
+                 name="img_10"
+                 value="">
+          <input class="add-blog-input-header"
+                 placeholder="Paragraph Header 10 (optional)"
+                 name="body_header_10">
+          <textarea class="add-blog-input-body"
+                    placeholder="Paragraph 10"
+                    name="body_10"></textarea>
+        </div>
+        <div class="add-blog-btn-wrapper">
+          <input class="add-blog-submit-btn" type="submit" value="Post">
           <a href="{{url_for('showBlog')}}" class="add-blog-cancel-btn">Cancel</a>
-        </span>
+        </div>
       </form>
     </div>
     <script src="../static/js/libs/knockout-3.2.0.js"></script>
