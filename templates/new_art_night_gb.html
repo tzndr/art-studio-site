@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="../static/css/style.css">
+  </head>
+  <body>
+    <div class="background-img-2"></div>
+    {% block content %}
+      {% include "header.html" %}
+    {% endblock %}
+    <div class="add-blog-post-container">
+      <h1 class="add-blog-post-title">Add New Blog Post</h1>
+      <form class="add-blog-post-form" action="{{url_for('showNewArtNightGreenBay')}}" method="POST">
+        <input class="add-blog-input"
+               placeholder="Art Night City (Two Rivers or Green Bay)"
+               name="city"
+               value="Green Bay"
+               maxlength = "50"
+               required>
+        <input class="add-blog-input"
+               placeholder="Project Title"
+               name="title"
+               required>
+        <input class="add-blog-input"
+              placeholder="Project Image"
+              value="../static/img/art_night/"
+              name="project_img"
+              required>
+        <textarea
+               class="add-blog-input"
+               rows="15"
+               placeholder="Project Description"
+               name="description"
+               required></textarea>
+        <input class="add-blog-input"
+             placeholder="Project Date (Format: Tuesday December 16th, 2020)"
+             name="date"
+             required>
+        <input class="add-blog-input"
+            placeholder="Project Time (Format: 12:00PM)"
+            name="time"
+            required>
+        <input class="add-blog-input"
+            placeholder="Registration Cost (Format: 35.00)"
+            value="35.00"
+            name="cost"
+            required>
+        <input class="add-blog-input"
+            placeholder="Location Name (Example: Sepia Chapel)"
+            value="Sepia Chapel"
+            name="location"
+            required>
+        <input class="add-blog-input"
+            placeholder="Location Address (Format: 3562 Finger Rd Green Bay, WI 54311)"
+            value="3562 Finger Rd Green Bay, WI 54311"
+            name="address"
+            required>
+        <input class="add-blog-input"
+             placeholder="Upcoming Date 1 (Format: Tuesday December 16th, 2020)"
+             name="upcoming_date_1"
+             required>
+        <input class="add-blog-input"
+            placeholder="Upcoming Date 2 (Format: Tuesday December 16th, 2020)"
+            name="upcoming_date_2"
+            required>
+        <input class="add-blog-input"
+             placeholder="Upcoming Date 3 (Format: Tuesday December 16th, 2020)"
+             name="upcoming_date_3"
+             required>
+
+        <div class="add-blog-btn-wrapper">
+          <input class="add-blog-submit-btn" type="submit" value="Post">
+          <a href="{{url_for('showArtNightGreenBay')}}" class="add-blog-cancel-btn">Cancel</a>
+        </div>
+      </form>
+    </div>
+    <script src="../static/js/libs/knockout-3.2.0.js"></script>
+    <script src="../static/js/model.js"></script>
+    <script src="../static/js/app.js"></script>
+  </body>
+</html>

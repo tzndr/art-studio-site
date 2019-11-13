@@ -57,6 +57,7 @@ class ArtNight(Base):
     __tablename__ = 'art_night'
 
     id = Column(Integer, primary_key = True)
+    city = Column(String(50), nullable = False)
     title = Column(String(100), nullable = False)
     description = Column(String(1000), nullable = False)
     project_img = Column(String(200), nullable = False)
@@ -64,9 +65,12 @@ class ArtNight(Base):
     time = Column(String(50), nullable = False)
     cost = Column(String(50), nullable = False)
     location = Column(String(250), nullable = False)
+    address = Column(String(100), nullable = False)
     upcoming_date_1 = Column(String(50), nullable = False)
     upcoming_date_2 = Column(String(50), nullable = False)
-    upcoming_date_3 = Column(String(50)nullable = False)
+    upcoming_date_3 = Column(String(50), nullable = False)
+    user_id = Column(Integer, ForeignKey('user.id'))
+    user = relationship(User)
 
 
 class BlogPost(Base):

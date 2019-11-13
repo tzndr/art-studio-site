@@ -1,7 +1,7 @@
 from flask import Flask, render_template, redirect, url_for, request, flash
 from sqlalchemy import create_engine, asc
 from sqlalchemy.orm import sessionmaker
-from models import Base, User, Category, Item, BlogPost
+from models import Base, User, Category, Item, BlogPost, ArtNight
 from flask import session as login_session
 import random, string
 from oauth2client.client import flow_from_clientsecrets
@@ -154,13 +154,79 @@ def showArtNight():
     return render_template('art_night.html')
 
 @app.route('/artnight/greenbay')
-def showArtNightGreenBay:
-    return render_template('art_night_greenbay.html')
-
+def showArtNightGreenBay():
+    art_nights = session.query(ArtNight).all()
+    city = "Green Bay"
+    if 'email' not in login_session or login_session['email'] != 'tzcode35@gmail.com':
+        return render_template('art_night_greenbay_public.html', art_nights = art_nights, city = city)
+    else:
+        return render_template('art_night_greenbay.html', art_nights = art_nights, city = city)
 
 @app.route('/artnight/tworivers')
-def showArtNightTwoRivers:
-    return render_template('art_night_tworivers.html')
+def showArtNightTwoRivers():
+    art_nights = session.query(ArtNight).all()
+    if 'email' not in login_session or login_session['email'] != 'tzcode35@gmail.com':
+        return render_template('art_night_tworivers_public.html', art_nights = art_nights)
+    else:
+        return render_template('art_night_tworivers.html', art_nights = art_nights)
+
+@app.route('/artnight/newgb')
+def showNewArtNightGreenBay():
+    nights = session.query(ArtNight).all()
+    if 'email' not in login_session or login_session['email'] != 'tzcode35@gmail.com':
+        flash("You are not authorized to view the requested page")
+        return render_template('index.html')
+    else:
+        if request.method == 'POST':
+            newArtNight = ArtNight(
+                city = request.form['city'],
+                title = request.form['title'],
+                description = request.form['description'],
+                project_img = request.form['project_img'],
+                date = request.form['date'],
+                time = request.form['time'],
+                cost = request.form['cost'],
+                location = request.form['location'],
+                address = request.form['address'],
+                upcoming_date_1 = request.form['upcoming_date_1'],
+                upcoming_date_2 = request.form['upcoming_date_2'],
+                upcoming_date_3 = request.form['upcoming_date_3']
+            )
+            session.add(newArtNight)
+            session.commit()
+            flash("%s has been posted sucessfully!" % newArtNight.title)
+            return redirect(url_for('showArtNightGreenBay'))
+        else:
+            return render_template('new_art_night_gb.html', nights = nights)
+
+@app.route('/artnight/newtr')
+def showNewArtNightTwoRivers():
+    nights = session.query(ArtNight).all()
+    if 'email' not in login_session or login_session['email'] != 'tzcode35@gmail.com':
+        flash("You are not authorized to view the requested page")
+        return render_template('index.html')
+    else:
+        if request.method == 'POST':
+            newArtNight = ArtNight(
+                city = request.form['city'],
+                title = request.form['title'],
+                description = request.form['description'],
+                project_img = request.form['project_img'],
+                date = request.form['date'],
+                time = request.form['time'],
+                cost = request.form['cost'],
+                location = request.form['location'],
+                address = request.form['address'],
+                upcoming_date_1 = request.form['upcoming_date_1'],
+                upcoming_date_2 = request.form['upcoming_date_2'],
+                upcoming_date_3 = request.form['upcoming_date_3']
+            )
+            session.add(newArtNight)
+            session.commit()
+            flash("%s has been posted sucessfully!" % newArtNight.title)
+            return redirect(url_for('showArtNightTwoRivers'))
+        else:
+            return render_template('new_art_night_tr.html', nights = nights)
 
 @app.route('/catalog')
 def showCatalog():

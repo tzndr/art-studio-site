@@ -10,77 +10,17 @@
     {% block content %}
       {% include "header.html" %}
     {% endblock %}
-    {%with messages = get_flashed_messages()%}
-      {%if messages%}
-        {%for message in messages%}
-          <div id="flash-message" class="flash">
-            {{message}}
-          </div>
-        {%endfor%}
-      {%endif%}
-    {%endwith%}
-    <div class="art-night-main-container">
-      <div class="art-night-text-wrapper">
-        <h1 class="art-night-title" data-bind="text: artNightTitle"></h1>
-        <p class="art-night-text" data-bind="text: artNightText"></p>
-      </div>
-      <div class="art-night-main-img-container">
-        <img class="art-night-main-img" src="../static/img/art_night/art_night_img.webp">
-      </div>
+    <div class='art-night-selector-container'>
+      <h1 class='art-night-selector-header'>Please select your Art Night location</h1>
+      <span class='art-night-selector-btn-wrapper'>
+        <a href="{{url_for('showArtNightGreenBay')}}" class='art-night-selector-btn'>Green Bay</a>
+        <a href="{{url_for('showArtNightTwoRivers')}}" class='art-night-selector-btn'>Two Rivers</a>
+      </span>
     </div>
-    <div class="art-night-info-container">
-      <div class="art-night-info-wrapper">
-        <p class="art-night-info-header">Location</p>
-        <p class="art-night-info" data-bind="text: artNightLocation"></p>
-      </div>
-      <div class="art-night-info-wrapper">
-        <p class="art-night-info-header">Date & Time</p>
-        <p class="art-night-info" data-bind="text: artNightDate"></p>
-        <p class="art-night-info" data-bind="text: artNightTime"></p>
-      </div>
-      <form class="reg-btn" action="https://checkout.payhub.com/transaction/cart" id="GuHkPm9iKtPkLlsFacARAq" method="post" target="_payhubcart">
-        <input type="hidden" name="mode" value="live" />
-        <input type="hidden" name="orgid" value="16217" />
-        <input type="hidden" name="apitoken" value="c6b32a62-00cc-4ed8-a178-96313e4c67e7" />
-        <input type="hidden" name="line_item[]" value="Registration" />
-        <input type="hidden" name="amount[]" value="35.00" />
-        <input type="hidden" name="note[]" value="" />
-        <input type="hidden" name="shipping_fee[]" value="" /><br />
-        <input type="text" name="qty[]" value="1" class="qty-box" placeholder="Qty" required="true" pattern="^[0-9]{1,6}$" />
-        <a href="#" onClick="document.getElementById('GuHkPm9iKtPkLlsFacARAq').submit();return false;"
-        class="art-night-register-btn">Register!</a>
-        <input type="hidden" name="custom_email_message" value="Thank you for registering for our next Art Night. See you there!" />
-      </form>
-    </div>
-    <div class="art-night-dates">
-      <h1 class="art-night-dates-header">Upcoming Art Night Dates</h1>
-      <p class="art-night-dates-text" data-bind="text: artNightDateText1"></p>
-      <p class="art-night-dates-text" data-bind="text: artNightDateText2"></p>
-      <p class="art-night-dates-text" data-bind="text: artNightDateText3"></p>
-    </div>
-    <div class="art-night-img-wrapper">
-      <img class="art-night-img" src="../static/img/art_night/an_1.png">
-      <img class="art-night-img" src="../static/img/art_night/an_2.png">
-      <img class="art-night-img" src="../static/img/art_night/an_3.png">
-    </div>
-    <div class="art-night-testimonials">
-      <h1 class="art-night-test-header">Testimonials</h1>
-      <div class="art-night-test-wrapper">
-        <p class="art-night-test-text" data-bind="text: artNightTestimonial1"></p>
-        <p class="art-night-test-text" data-bind="text: artNightTestimonial2"></p>
-        <p class="art-night-test-text" data-bind="text: artNightTestimonial3"></p>
-      </div>
-    </div>
+
     <script src="../static/js/libs/knockout-3.2.0.js"></script>
     <script src="../static/js/model.js"></script>
     <script src="../static/js/app.js"></script>
     <script src="../static/js/libs/jquery.min.js"></script>
-    <script>
-      $(function() {
-        $('#flash-message').delay(500).fadeIn('normal', function() {
-          $(this).delay(5000).fadeOut();
-        });
-      });
-    </script>
   </body>
 </html>
